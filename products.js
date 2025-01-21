@@ -1,0 +1,512 @@
+const products = [
+  {
+    model: "SF90 Stradale",
+    description:
+      "The car's name encapsulates the true significance of all that has been achieved in terms of performance. The reference to the 90th anniversary of the foundation of Scuderia Ferrari underscores the strong link that has always existed between Ferrari’s track and road cars.",
+    imageProduct: "Ferrari/sf90-stradale/ferrari-sf90-1.jpg",
+    image: "Ferrari/sf90-stradale/ferrari-sf90-1.jpg",
+    photos: [
+      "Ferrari/sf90-stradale/ferrari-sf90-1.jpg",
+      "Ferrari/sf90-stradale/ferrari-sf90-2.jpg",
+      "Ferrari/sf90-stradale/ferrari-sf90-3.jpg",
+      "Ferrari/sf90-stradale/ferrari-sf90-4.jpg",
+      "Ferrari/sf90-stradale/ferrari-sf90-5.jpg",
+    ],
+    featured: true,
+    price: 700000,
+    stock: 5,
+    year: 2020,
+    engine:
+      "The SF90 Stradale is Ferrari's first plug-in hybrid electric vehicle (PHEV). It's also the first mid-engine Ferrari with all-wheel drive. It has a 4.0-liter twin-turbo 90-degree V8 engine and three electric motors.",
+    brandId: 3,
+  },
+  {
+    model: "La Rose Noire",
+    description:
+      "A modern interpretation of the roadster body style, Droptail represents the next chapter of Rolls-Royce Coachbuild. La Rose Noire Droptail, embodies the allure of the Black Baccara rose.",
+    imageProduct: "RollsRoyce/la-rose-noire-droptail/droptail-1.png",
+    image: "RollsRoyce/la-rose-noire-droptail/droptail-1.png",
+    photos: [
+      "RollsRoyce/la-rose-noire-droptail/droptail-1.png",
+      "RollsRoyce/la-rose-noire-droptail/droptail-2.png",
+      "RollsRoyce/la-rose-noire-droptail/droptail-3.png",
+      "RollsRoyce/la-rose-noire-droptail/droptail-4.png",
+      "RollsRoyce/la-rose-noire-droptail/droptail-5.png",
+    ],
+    featured: true,
+    price: 30000000,
+    stock: 3,
+    year: 2022,
+    engine:
+      "The Rolls-Royce La Rose Noire Droptail has a 6.75-liter twin-turbocharged V12 engine that produces: 563 horsepower, 625 lb-ft of torque, 0 to 60 mph in 4.8 seconds, and A top speed of 155 mph.",
+    brandId: 4,
+  },
+
+  {
+    model: "328 GTB",
+    description:
+      "The 308 series had won universal acclaim from both customers and critics, and its natural evolution continued with the 328 GTB, a berlinetta fitted with the new 3.2-litre version of the V8.",
+    imageProduct: "Ferrari/328-gtb/328-gtb-1.jpg",
+    image: "Ferrari/328-gtb/328-gtb-1.jpg",
+    photos: [
+      "Ferrari/328-gtb/328-gtb-1.jpg",
+      "Ferrari/328-gtb/328-gtb-2.jpg",
+      "Ferrari/328-gtb/328-gtb-3.jpg",
+      "Ferrari/328-gtb/328-gtb-4.jpg",
+      "Ferrari/328-gtb/328-gtb-5.jpg",
+    ],
+    featured: false,
+    price: 130000,
+    stock: 4,
+    year: 1985,
+    engine:
+      "The 328 GTB was produced from 1986 to 1989, and was the last Ferrari with a transverse V8 engine. It was considered a reliable and functional model, and was relatively simple compared to other Ferraris of the time. The 328 GTB could accelerate from 0 to 60 miles per hour in about 5.5 seconds, and had a top speed of 166 miles per hour.",
+    brandId: 3,
+  },
+  {
+    model: "Duke Dynamics",
+    description:
+      "The Duke Dynamics Lamborghini Aventador is a custom kit that includes a front bumper, front fenders, side skirts, rear bumper, and rear diffuser. The kit is designed to improve the car's performance and give it a more aerodynamic and aggressive look.",
+    image: "Lambo/Duke/duke-lambo-fire.png",
+    imageProduct: "Lambo/Duke/duke-lambo.png",
+    photos: [
+      "Lambo/Duke/duke-lambo.png",
+      "Lambo/Duke/duke-lambo-fire.png",
+      "Lambo/Duke/duke-lambo-back.png",
+      "Lambo/Duke/duke-lambo-front.png",
+      "Lambo/Duke/duke-lambo-wheel.png",
+      "Lambo/Duke/duke-lambo-close.png",
+    ],
+    featured: false,
+    price: 320000,
+    stock: 4,
+    year: 2023,
+    engine:
+      "The mid-mount 6.5 liter V-12, generating 740 CV at 8,400 rpm, offers remarkable pick-up at high engine speeds and an incredibly fast response.",
+    brandId: 5,
+  },
+  {
+    model: "SP48 Unica",
+    description:
+      "Designed by the Ferrari Styling Centre under the direction of Flavio Manzoni, Chief Design Officer, is a two-seater sports berlinetta developed on the F8 Tributo platform.",
+    imageProduct: "Ferrari/sp48-unica/sp48-unica-1.jpg",
+    image: "Ferrari/sp48-unica/sp48-unica-1.jpg",
+    photos: [
+      "Ferrari/sp48-unica/sp48-unica-1.jpg",
+      "Ferrari/sp48-unica/sp48-unica-2.jpg",
+      "Ferrari/sp48-unica/sp48-unica-3.jpg",
+      "Ferrari/sp48-unica/sp48-unica-4.jpg",
+      "Ferrari/sp48-unica/sp48-unica-5.jpg",
+    ],
+    featured: false,
+    price: 250000,
+    stock: 3,
+    year: 2022,
+    engine:
+      "The Ferrari SP48 Unica has a 3.9-liter twin-turbo V8 engine that produces 710 horsepower and 770 Newton-meters (568 pound-feet) of torque.",
+    brandId: 3,
+  },
+  {
+    model: "288 GTO",
+    description:
+      "Twin-turbo engine, use of special materials, Pininfarina styling. The first production model with the features of a racing car.",
+    imageProduct: "Ferrari/288-gto/1984_Ferrari_288GTO-0-1536.jpg",
+    image: "Ferrari/288-gto/1984_Ferrari_288GTO-0-1536.jpg",
+    photos: [
+      "Ferrari/288-gto/1984_Ferrari_288GTO-0-1536.jpg",
+      "Ferrari/288-gto/1984_Ferrari_288GTO-1-1536.jpg",
+      "Ferrari/288-gto/1984_Ferrari_288GTO-2-1536.jpg",
+      "Ferrari/288-gto/1984_Ferrari_288GTO-3-1536.jpg",
+    ],
+    featured: false,
+    price: 3250000,
+    stock: 2,
+    year: 1984,
+    engine:
+      "The 288 GTO's engine is longitudinally mounted, which is different from the transverse mounting of other Ferrari models. This longitudinal mounting allows for a better gear ratio and a lower center of gravity, which is beneficial for racing",
+    brandId: 3,
+  },
+  {
+    model: "765LT",
+    description:
+      "The McLaren 765LT is a two-door, two-passenger, mid-engine, rear-wheel-drive supercar designed for both road and track use. It has an intense driving experience, looks sensational, and has precise steering.",
+    image: "McLaren/765lt/mclaren-765lt.png",
+    imageProduct: "McLaren/765lt/mclaren-765lt.png",
+    photos: [
+      "McLaren/765lt/mclaren-765lt.png",
+      "McLaren/765lt/mclaren-765lt-back.png",
+      "McLaren/765lt/mclaren-765lt-perfil.png",
+      "McLaren/765lt/mclaren-765lt-right.png",
+      "McLaren/765lt/mclaren-765lt-wheel.png",
+    ],
+    featured: false,
+    price: 320000,
+    stock: 4,
+    year: 2023,
+    engine:
+      "The McLaren 765LT has a 4.0 liter twin-turbocharged V8 engine that produces 765 horengine at 7,500 rpm and 800 Nm of torque at 800 rpm",
+    brandId: 1,
+  },
+  {
+    model: "296 GT3",
+    description:
+      "The Ferrari 296 GT3 is a versatile car, developed with the needs of gentleman drivers in mind, both those who aim to win and those who relish racing on the track.",
+    imageProduct: "Ferrari/296-gt3/296-gt3-1.jpg",
+    image: "Ferrari/296-gt3/296-gt3-1.jpg",
+    photos: [
+      "Ferrari/296-gt3/296-gt3-1.jpg",
+      "Ferrari/296-gt3/296-gt3-2.jpg",
+      "Ferrari/296-gt3/296-gt3-3.jpg",
+      "Ferrari/296-gt3/296-gt3-4.jpg",
+    ],
+    featured: true,
+    price: 820000,
+    stock: 3,
+    year: 2022,
+    engine:
+      "The 296 GT3's engine is designed to work with the air around it to maximize grip and handling. It has 20% greater downforce than the 488 GT3, Ferrari's previous GT racer.",
+    brandId: 3,
+  },
+  {
+    model: "356 SC",
+    description:
+      "The Porsche 356 SC with its small frontal area of only 1.4 square metres, designed by F.A. Porsche, is the first Porsche with a fibre glass-reinforced plastic body.",
+    imageProduct: "Porsche/porsche-356-sc-3.jpg",
+    image: "Porsche/porsche-356-sc-4.jpg",
+    photos: [
+      "Porsche/porsche-356-sc-1.jpg",
+      "Porsche/porsche-356-sc-2.jpg",
+      "Porsche/porsche-356-sc-3.jpg",
+      "Porsche/porsche-356-sc-4.jpg",
+      "Porsche/porsche-356-sc-6.jpg",
+    ],
+    featured: false,
+    price: 559500,
+    stock: 3,
+    year: 1964,
+    engine:
+      "In late 1964, the Factory 1.6L Type 616/16 flat-four motor was manufactured with a 9.5:1 compression ratio. This engine boasts the highest output of the 356 pushrod engines, with a factory rating of 95hp at 5,800 rpm.",
+    brandId: 2,
+  },
+  {
+    model: "Mission X",
+    description:
+      "Flat body, sculptural styling, closed design — the exterior design of the Mission X is both innovative and distinctively Porsche. From the light structure and Le-Mans-style doors to the integrated, adaptive wings.",
+    imageProduct: "Porsche/porsche-mission-x-1.jpg",
+    image: "Porsche/porsche-mission-x-1.jpg",
+    photos: [
+      "Porsche/porsche-mission-x-1.jpg",
+      "Porsche/porsche-mission-x-3.jpg",
+      "Porsche/porsche-mission-x-4.jpg",
+      "Porsche/porsche-mission-x-5.jpg",
+      "Porsche/porsche-mission-x-6.jpg",
+    ],
+    featured: false,
+    price: 1850000,
+    stock: 3,
+    year: 2025,
+    engine:
+      "Each wheel of the Mission X is driven by its own motor. The Mission X has a power-to-weight ratio of roughly one horsepower per 2.2 pounds. This is comparable to cars designed to break world top speed records.",
+    brandId: 2,
+  },
+  {
+    model: "Electric Phantom",
+    description:
+      "A luxury car known for its opulent interior, iconic design, and advanced technology.",
+    imageProduct: "RollsRoyce/electric-phantom/electric-phantom-1.jpg",
+    image: "RollsRoyce/electric-phantom/electric-phantom-1.jpg",
+    photos: [
+      "RollsRoyce/electric-phantom/electric-phantom-1.jpg",
+      "RollsRoyce/electric-phantom/electric-phantom-2.jpg",
+      "RollsRoyce/electric-phantom/electric-phantom-3.jpg",
+      "RollsRoyce/electric-phantom/electric-phantom-4.jpg",
+    ],
+    featured: false,
+    price: 495000,
+    stock: 7,
+    year: 1959,
+    engine:
+      "The Rolls-Royce Phantom V is a large, four-door limousine that was produced from 1959 to 1968. The original Phantom V had a 6,230 cc V8 engine with twin SU carburettors and a 4-speed automatic transmission.",
+    brandId: 4,
+  },
+  {
+    model: "103 EX",
+    description:
+      "Rolls-Royce 103EX is our first ever vision vehicle, and embodies just one of the endless possibilities that awaits. A personalised icon for the future, providing a sanctuary of calm in an ever-faster world. ",
+    imageProduct: "RollsRoyce/103ex/103ex-1.jpg",
+    image: "RollsRoyce/103ex/103ex-1.jpg",
+    photos: [
+      "RollsRoyce/103ex/103ex-1.jpg",
+      "RollsRoyce/103ex/103ex-2.jpg",
+      "RollsRoyce/103ex/103ex-3.jpg",
+      "RollsRoyce/103ex/103ex-4.jpg",
+      "RollsRoyce/103ex/103ex-5.jpg",
+    ],
+    featured: true,
+    price: 1800000,
+    stock: 7,
+    year: 2024,
+    engine:
+      "The Rolls-Royce 103EX is an all-electric vehicle, so it doesn't have an engine under the hood. The front end of the 103EX is instead used for luggage space.",
+    brandId: 4,
+  },
+  {
+    model: "Boat Tail",
+    description:
+      "Envisioned by extraordinary clients and realised by the master artisans of Coachbuild, this singular imagining honours the owners’ lifelong reverence for life at sea.",
+    imageProduct: "RollsRoyce/boat-tail/boat-tail-1.jpg",
+    image: "RollsRoyce/boat-tail/boat-tail-1.jpg",
+    photos: [
+      "RollsRoyce/boat-tail/boat-tail-1.jpg",
+      "RollsRoyce/boat-tail/boat-tail-2.jpg",
+      "RollsRoyce/boat-tail/boat-tail-3.jpg",
+      "RollsRoyce/boat-tail/boat-tail-4.jpg",
+    ],
+    featured: false,
+    price: 30000000,
+    stock: 3,
+    year: 2022,
+    engine:
+      "The Rolls-Royce Boat Tail has a 6.75-liter twin-turbocharged V12 engine that produces 563 horsepower and 900 Nm of torque. It's a modified version of the engine found in the Rolls-Royce Phantom, and accelerates from 0 to 62 mph in around 5.3 seconds.",
+    brandId: 4,
+  },
+
+  {
+    model: "911 GT3",
+    description:
+      "For almost 25 years the 911 GT3 has accepted only the limits of physics — and left the ordinary far behind. Motorsport-tested design and maximum performance ensure it unwaveringly bridges the boundary between the racetrack and the road.",
+    imageProduct: "Porsche/porsche-911-gt3-1.jpg",
+    image: "Porsche/porsche-911-gt3-1.jpg",
+    photos: [
+      "Porsche/porsche-911-gt3-1.jpg",
+      "Porsche/porsche-911-gt3-4.jpg",
+      "Porsche/porsche-911-gt3-3.jpg",
+      "Porsche/porsche-911-gt3-5.jpg",
+      "Porsche/porsche-911-gt3-6.jpg",
+    ],
+    featured: false,
+    price: 222500,
+    stock: 9,
+    year: 2024,
+    engine:
+      "The Porsche 911 GT3 has a 4.0-liter, naturally aspirated, flat-six engine that produces 502 horsepower and 331 lb-ft of torque. It has a high-revving design, with a maximum power of 8,400 rpm and a rev limiter that cuts in at 9,000 rpm.",
+    brandId: 2,
+  },
+  {
+    model: "100 Coupe S",
+    description:
+      "It is a two-door coupé with a fastback design and a front-engine, front-wheel-drive layout.",
+    imageProduct: "Audi/audi-100-coupe-s-1.png",
+    image: "Audi/audi-100-coupe-s-1.png",
+    photos: [
+      "Audi/audi-100-coupe-s-1.png",
+      "Audi/audi-100-coupe-s-2.png",
+      "Audi/audi-100-coupe-s-3.png",
+      "Audi/audi-100-coupe-s-4.png",
+      "Audi/audi-100-coupe-s-5.png",
+    ],
+    featured: true,
+    price: 37000,
+    stock: 5,
+    year: 1969,
+    engine:
+      "The Audi 100 Coupé S, a classic sports coupe from the 1970s, was powered by a reliable and efficient inline-four cylinder engine. This 1.8-liter engine, with its single overhead camshaft and carburetor setup, produced around 110-115 horsepower.",
+    brandId: 6,
+  },
+  {
+    model: "Spider RS",
+    description:
+      "Pure GT engineering in a proudly open-top 2-seater. Puristic, unfiltered, genuine. The 718 Spyder RS is a mid-engine roadster that leaves worries behind in fractions of a second. For driving pleasure with engineful sound that you can hear and feel immediately.",
+    imageProduct: "Porsche/porsche-spiderRS-6.jpg",
+    image: "Porsche/porsche-spiderRS-1.jpg",
+    photos: [
+      "Porsche/porsche-spiderRS-1.jpg",
+      "Porsche/porsche-spiderRS-2.jpg",
+      "Porsche/porsche-spiderRS-3.jpg",
+      "Porsche/porsche-spiderRS-4.jpg",
+      "Porsche/porsche-spiderRS-5.jpg",
+      "Porsche/porsche-spiderRS-6.jpg",
+    ],
+    featured: false,
+    price: 2535000,
+    stock: 10,
+    year: 2024,
+    engine:
+      "The Porsche 718 Spyder RS is powered by a high-performance, naturally aspirated 4.0-liter flat-six engine. This engine, shared with the iconic 911 GT3, delivers an impressive 500 horsepower and 331 lb-ft of torque. It's a high-revving engine, capable of reaching 9,000 RPM, providing a thrilling driving experience.",
+    brandId: 2,
+  },
+  {
+    model: "Aventador Ultimae",
+    description:
+      "The Lamborghini Aventador Ultimae is a mid-engine, all-wheel-drive, two-door coupe super sports car with a V12 engine.",
+    image: "Lambo/Aventador/lambo-aventador-left.png",
+    imageProduct: "Lambo/Aventador/lambo-aventador-left.png",
+    photos: [
+      "Lambo/Aventador/lambo-aventador-back.png",
+      "Lambo/Aventador/lambo-aventador-right.png",
+      "Lambo/Aventador/lambo-aventador-left.png",
+      "Lambo/Aventador/lambo-aventador-driving.png",
+      "Lambo/Aventador/lambo-aventador-wheel.png",
+    ],
+    featured: false,
+    price: 860000,
+    stock: 3,
+    year: 2022,
+    engine:
+      "The heart of the Aventador LP 780-4 Ultimae is the mosengineful standard-production naturally aspirated V12 in Lamborghini history. This result was achieved by incorporating titanium intake valves that increase maximuengine to 780 CV (574 kW) at 8,500 rpm.",
+    brandId: 5,
+  },
+  {
+    model: "Revuelto",
+    description:
+      "The Lamborghini Revuelto is a high-performance, plug-in hybrid super sports car with a 6.5-liter V12 engine and three electric motors.",
+    image: "Lambo/Revuelto/lambo-revuelto.png",
+    imageProduct: "Lambo/Revuelto/lambo-revuelto.png",
+    photos: [
+      "Lambo/Revuelto/lambo-revuelto.png",
+      "Lambo/Revuelto/lambo-revuelto-back.png",
+      "Lambo/Revuelto/lambo-revuelto-left.png",
+      "Lambo/Revuelto/lambo-revuelto-wheel.png",
+      "Lambo/Revuelto/lambo-revuelto-wheel-2.png",
+    ],
+    featured: false,
+    price: 608000,
+    stock: 7,
+    year: 2023,
+    engine:
+      "With a total output of 1,001 horengine, the Revuelto is the mosengineful Lamborghini ever made.",
+    brandId: 5,
+  },
+  {
+    model: "Miura S",
+    description:
+      "The Miura was the first standard production supercar and was developed from the Miura 350 CV. Is a two-seater sports car with a central V12 engine that was produced from 1969 to 1971.",
+    image: "Lambo/Miura/lambo-miura.png",
+    imageProduct: "Lambo/Miura/lambo-miura.png",
+    photos: [
+      "Lambo/Miura/lambo-miura.png",
+      "Lambo/Miura/lambo-miura2.png",
+      "Lambo/Miura/lambo-miura-back.png",
+      "Lambo/Miura/lambo-miura-back2.png",
+      "Lambo/Miura/lambo-miura-interior.png",
+      "Lambo/Miura/lambo-miura-wheel.png",
+      "Lambo/Miura/lambo-miura-front.png",
+    ],
+    featured: false,
+    price: 2500000,
+    stock: 7,
+    year: 1967,
+    engine:
+      "The Miura S has a 4-liter V12 engine with 370 horengine at 7,500 rpm and 389 N·m of torque at 5,500 rpm.",
+    brandId: 5,
+  },
+  {
+    model: "Mantis 720S Spider",
+    description:
+      "The McLaren 720S Spider is a convertible supercar with a carbon fiber Monocage II-S chassis, a twin-turbo V8 engine, and a top speed of 212 mph.",
+    image: "McLaren/Mantis/mantis-green.png",
+    imageProduct: "McLaren/Mantis/mantis-green.png",
+    photos: [
+      "McLaren/Mantis/mantis-green.png",
+      "McLaren/Mantis/mantis-green-back.png",
+      "McLaren/Mantis/mantis-green-perfil.png",
+      "McLaren/Mantis/mantis-green-doors.png",
+      "McLaren/Mantis/mantis-green-wheel.png",
+      "McLaren/Mantis/mantis-green-front.png",
+      "McLaren/Mantis/mantis-green-half.png",
+      "McLaren/Mantis/mantis-green-up.png",
+    ],
+    featured: false,
+    price: 326500,
+    stock: 10,
+    year: 2018,
+    engine: "The 720S Spider has a 710 bhp twin-turbo V8 engine that produces 770 Nm of torque.",
+    brandId: 1,
+  },
+  {
+    model: "M6GT Coupé",
+    description:
+      "The 1969 McLaren M6GT Coupé is a high-performance road car with a Chevrolet V8 engine, designed by Bruce McLaren to be the fastest and quickest accelerating car in the world.",
+    image: "McLaren/M6GT/m6gt.png",
+    imageProduct: "McLaren/M6GT/m6gt.png",
+    photos: [
+      "McLaren/M6GT/m6gt.png",
+      "McLaren/M6GT/m6gt-back.png",
+      "McLaren/M6GT/m6gt-front.png",
+      "McLaren/M6GT/m6gt-diagonal.png",
+      "McLaren/M6GT/m6gt-right.png",
+    ],
+    featured: false,
+    price: 230000,
+    stock: 3,
+    year: 1969,
+    engine:
+      "The 1969 McLaren M6GT has a Bartz-tuned Chevrolet engine that provides an estimated top speed of 165 miles per hour and a 0 to 100 miles per hour time of eight seconds.",
+    brandId: 1,
+  },
+  {
+    model: "458 Spider",
+    description:
+      "The 458 Spider is the first car ever to combine a mid-rear engine with a retractable folding hard top that delivers both unprecedented in-cabin comfort when closed and unparalleled Spider performance.",
+    imageProduct: "Ferrari/458-spider/458-spider-1.jpg",
+    image: "Ferrari/458-spider/458-spider-1.jpg",
+    photos: [
+      "Ferrari/458-spider/458-spider-1.jpg",
+      "Ferrari/458-spider/458-spider-2.jpg",
+      "Ferrari/458-spider/458-spider-3.jpg",
+      "Ferrari/458-spider/458-spider-4.jpg",
+      "Ferrari/458-spider/458-spider-5.jpg",
+    ],
+    featured: false,
+    price: 640000,
+    stock: 3,
+    year: 2013,
+    engine:
+      "The Ferrari 458 Spider is powered by a naturally aspirated 4.5-liter V8 engine, a masterpiece of engineering that delivers exhilarating performance. This engine produces an impressive 562 horsepower and 398 lb-ft of torque, propelling the car from 0 to 60 mph in just 3.4 seconds and reaching a top speed of 198 mph.",
+    brandId: 3,
+  },
+  {
+    model: "Taycan Turbo",
+    description:
+      "The overwhelming feeling of sitting in an amazing electric sports car: The new Taycan makes electricity even more electrifying. Performance even more impressive. And the extraordinary even more outstanding.",
+    imageProduct: "Porsche/porsche-taycan-turbo-5.jpg",
+    image: "Porsche/porsche-taycan-turbo-1.jpg",
+    photos: [
+      "Porsche/porsche-taycan-turbo-1.jpg",
+      "Porsche/porsche-taycan-turbo-2.jpg",
+      "Porsche/porsche-taycan-turbo-3.jpg",
+      "Porsche/porsche-taycan-turbo-4.jpg",
+      "Porsche/porsche-taycan-turbo-5.jpg",
+    ],
+    featured: false,
+    price: 920000,
+    stock: 3,
+    year: 2022,
+    engine:
+      "The Porsche Taycan Turbo is an all-electric sports car powered by two permanent magnet synchronous electric motors, one on each axle, providing all-wheel drive. This setup delivers impressive performance figures, with a combined output of up to 670 horsepower and 626 lb-ft of torque.",
+    brandId: 2,
+  },
+  {
+    model: "PB18 eTron",
+    description:
+      "The all-electric Audi PB18 e-tron presents a radical vision for the high-performance sports car of tomorrow. Broad and flat, visibly inspired by the wind tunnel and the race track, its very presence signals that it is destined to push boundaries.",
+    imageProduct: "Audi/audi-pb18-eTron-4.jpg",
+    image: "Audi/audi-pb18-eTron-4.jpg",
+    photos: [
+      "Audi/audi-pb18-eTron-2.jpg",
+      "Audi/audi-pb18-eTron-3.jpg",
+      "Audi/audi-pb18-eTron-1.jpg",
+      "Audi/audi-pb18-eTron-4.jpg",
+      "Audi/audi-pb18-eTron-5.jpg",
+    ],
+    featured: true,
+    price: 920000,
+    stock: 3,
+    year: 2022,
+    engine:
+      "The Audi PB18 e-tron is an electric supercar concept that reimagines the future of high-performance vehicles. Unlike traditional internal combustion engines, the PB18 e-tron utilizes a dual-motor electric powertrain to power all four wheels.",
+    brandId: 6,
+  },
+];
+
+module.exports = products;
