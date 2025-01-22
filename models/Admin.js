@@ -27,7 +27,7 @@ class Admin extends Model {
       },
       {
         sequelize,
-        modelName: "admin", // Nombre del modelo en singular y en minúscula.
+        modelName: "admin",
       },
     );
     return Admin;

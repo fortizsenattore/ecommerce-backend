@@ -21,22 +21,10 @@ async function runAllSeeders() {
   await require("./userSeeder")();
   await require("./adminSeeder")();
 
-  /*
-   * Aquí se pueden ejectuar otros seeders que hayan en el sistema.
-   * Por ejemplo, si se tuviesen seeders para los estudiantes
-   * habría que ejectuar:
-   *
-   * await require("./studentSeeder")();
-   *
-   * IMPORTANTE: tener en cuenta que el orden en que se ejecutan los seeders
-   * suele ser clave. Por ejemplo, antes de crear artículos habría que
-   * crear los usuarios, ya que cada artículo debe tener un autor.
-   */
-
   console.log("[Database] ¡Los datos de prueba fueron insertados!");
   // process.exit();
 }
 
 // runAllSeeders();
 
-module.exports = runAllSeeders
+module.exports = runAllSeeders;

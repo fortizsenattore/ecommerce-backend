@@ -10,7 +10,7 @@ class Brand extends Model {
       },
       {
         sequelize,
-        modelName: "brand", // Nombre del modelo en singular y en minúscula.
+        modelName: "brand",
       },
     );
     return Brand;

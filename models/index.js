@@ -1,9 +1,9 @@
 const { Sequelize } = require("sequelize");
 
 const sequelizeConfig = {
-  host: process.env.DB_HOST, // Ej: 127.0.0.1
-  dialect: process.env.DB_CONNECTION, // Ej: mysql
-  logging: false, // Para que no aparezcan mensajes en consola.
+  host: process.env.DB_HOST, 
+  dialect: process.env.DB_CONNECTION, 
+  logging: false, 
 };
 
 if (process.env.DB_CONNECTION === "postgres") {
@@ -11,33 +11,26 @@ if (process.env.DB_CONNECTION === "postgres") {
 }
 
 const sequelize = new Sequelize(
-  process.env.DB_DATABASE, // Ej: hack_academy_db
-  process.env.DB_USERNAME, // Ej: root
-  process.env.DB_PASSWORD, // Ej: root
-  sequelizeConfig,
+  process.env.DATABASE_URL,
+  // process.env.DB_DATABASE, // Ej: hack_academy_db
+  // process.env.DB_USERNAME, // Ej: root
+  // process.env.DB_PASSWORD, // Ej: root
+  // sequelizeConfig,
 );
 
-// Requerir todos los modelos:
+
 const User = require("./User");
 const Order = require("./Order");
 const Product = require("./Product");
 const Admin = require("./Admin");
 const Brand = require("./Brand");
 
-// Inicializar todos los modelos:
+
 User.initModel(sequelize);
 Order.initModel(sequelize);
 Product.initModel(sequelize);
 Admin.initModel(sequelize);
 Brand.initModel(sequelize);
-
-/*
- * Luego de definir los modelos, se pueden establecer relaciones entre los
- * mismos (usando métodos como belongsTo, hasMany y belongsToMany)...
- *
- * Por ejemplo, si un User está relacionado con un Order, establecerlo
- * aquí abajo.
- */
 
 Brand.hasMany(Product);
 Product.belongsTo(Brand);
