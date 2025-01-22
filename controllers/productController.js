@@ -75,7 +75,6 @@ async function update(req, res) {
 
     form.parse(req, async (err, fields, files) => {
       const { model, description, featured, price, stock, year, engine, brandId } = fields;
-      console.log({ fields, files });
       await Product.update(
         {
           model,
