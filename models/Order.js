@@ -20,7 +20,7 @@ class Order extends Model {
       },
       {
         sequelize,
-        modelName: "order", // Nombre del modelo en singular y en minúscula.
+        modelName: "order",
       },
     );
 

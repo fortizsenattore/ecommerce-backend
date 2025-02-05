@@ -30,7 +30,7 @@ class User extends Model {
       },
       {
         sequelize,
-        modelName: "user", // Nombre del modelo en singular y en minúscula.
+        modelName: "user", 
       },
     );
     return User;
